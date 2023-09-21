@@ -1,0 +1,145 @@
+/* Стилизация текста */
+
+html, body{
+    font-family: Roboto, sans-serif;
+    
+    --primary-color: #2f80ed;
+    --secondary-color: #333333;
+    --bg-color: #ffffff;
+    --button-text-color: #202020;
+
+    background-color: var(--bg-color);
+}
+
+html.dark, .dark body {
+    font-family: Roboto, sans-serif;
+
+    --primary-color: #2f80ed;
+    --secondary-color: #ffffff;
+    --bg-color: #202020;
+    --button-text-color: #ffffff;
+
+    background-color: var(--bg-color);
+}
+
+* {
+    color: var(--secondary-color);
+}
+
+.cv {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 0.25em;
+}
+
+h2 {
+    color: var(--secondary-color);
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+h3 {
+    color: var(--primary-color);
+}
+
+a {
+    color: var(--primary-color);
+}
+
+.button-extras {
+    color: var(--primary-color);
+    margin-right: 1em;
+    display: inline-block;
+    padding: 1px 1px;
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 1em;
+    user-select: none;
+}
+
+.button-extras:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+.img-face {
+    margin-top: 2em;
+    border: 3px solid var(--primary-color);
+}
+
+.themetoggle-button {
+    color: var(--primary-color);
+    margin-right: 1em;
+    display: inline-block;
+    padding: 1px 1px;
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 1em;
+    user-select: none;
+}
+
+.themetoggle-button:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+section {
+    margin-bottom: 3em;
+    position: relative;
+}
+
+.section__gallery {
+    text-align: right;
+    font-size: 1em;
+
+}
+
+.contacts {
+    margin-bottom: 2em;
+}
+
+.contact {
+    display: flex;
+
+    /* Минимальная длина типа contact__type*/
+    &__type { 
+        min-width: 90px;
+    }
+}
+
+.experience {
+    display: flex;
+    margin-bottom: 2em;
+
+    &__name {
+        font-weight: bold;
+    }
+
+    &__date {
+        min-width: 185px;
+        margin-bottom: 1em;
+    }
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 12
+}
+
+
+/* Изменение отображения для различных платформ */
+@media (max-width: 575px) {
+    .experience {
+        display: block;
+    }
+}
+
